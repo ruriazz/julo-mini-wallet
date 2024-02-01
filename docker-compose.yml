@@ -1,0 +1,21 @@
+version: '3'
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: julo-mini-wallet-exercise
+    image: ruriazz/julo-mini-wallet-exercise:latest
+    ports:
+      - 8000:8000
+    environment:
+      - APP_ENV=
+      - SECRET_KEY=
+      - ALLOWED_HOSTS=localhost,127.0.0.1
+      - TIME_ZONE=
+      - DATABASE_USED=sqlite
+      - MYSQL_DB_HOST=
+      - MYSQL_DB_PORT=
+      - MYSQL_DB_NAME=
+      - MYSQL_DB_USER=
+      - MYSQL_DB_PASS=
